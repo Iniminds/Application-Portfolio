@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chart>
+    <set label="VB 6.0" value="1"/>
+    <set label="ASP.NET" value="7"/>
+    <set label="SAP-ABAP" value="2"/>
+    <set label="ASP" value="9"/>
+    <set label="Hyperion" value="1"/>
+    <set label="MS .NET" value="1"/>
+    <set label="SharePoint" value="1"/>
+    <set label="PHP" value="1"/>
+    <set label="Power builder" value="1"/>
+    <set label="Java-J2EE" value="2"/>
+    <set label="Ariba" value="1"/>
+    <set label="Cordys" value="3"/>
+    <set label="CORDYS" value="1"/>
+    <set label="Documentum" value="1"/>
+    <set label="SAP ECC 6" value="8"/>
+</chart>

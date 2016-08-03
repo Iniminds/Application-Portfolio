@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 3.5.1
+- http://www.phpmyadmin.net
+-
+- Host: localhost
+- Generation Time: Nov 04, 2012 at 06:40 PM
+- Server version: 5.5.24-log
+- PHP Version: 5.3.13
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="http://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="database1" collation="latin1_swedish_ci" charset="latin1">
+            <pma:table name="application _details">
+                CREATE TABLE `application _details` (
+                  `Id` int(15) NOT NULL,
+                  `Department` varchar(50) NOT NULL,
+                  `app_name` text NOT NULL,
+                  `app_version` text NOT NULL,
+                  `app_publisher` text NOT NULL,
+                  `app_platform` text NOT NULL,
+                  PRIMARY KEY (`Id`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Database: 'database1'
+    -->
+    <database name="database1">
+        <!-- Table application _details -->
+        <table name="application _details">
+            <column name="Id">1</column>
+            <column name="Department">computer engineering</column>
+            <column name="app_name">online quiz</column>
+            <column name="app_version">1.0</column>
+            <column name="app_publisher">open</column>
+            <column name="app_platform">php</column>
+        </table>
+        <table name="application _details">
+            <column name="Id">2</column>
+            <column name="Department">logistics</column>
+            <column name="app_name">business functioning</column>
+            <column name="app_version">6</column>
+            <column name="app_publisher">sap server</column>
+            <column name="app_platform">sap ecc 6</column>
+        </table>
+        <table name="application _details">
+            <column name="Id">3</column>
+            <column name="Department">attendence</column>
+            <column name="app_name">online attendance</column>
+            <column name="app_version">2.0</column>
+            <column name="app_publisher">sun</column>
+            <column name="app_platform">j2ee</column>
+        </table>
+    </database>
+</pma_xml_export>

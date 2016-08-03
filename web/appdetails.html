@@ -1,0 +1,105 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0
+Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1
+-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<jsp:include page="master page.jsp"/>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Application Details</title>
+<script type="text/javascript" src="jquery-1.4.2.js"></script>
+
+<script type="text/javascript">
+function lookup(inputString) {
+if(inputString.length == 0) {
+$('#suggestions').hide();
+} else {
+$.post("apps.jsp", {queryString: ""+inputString+""}, function(data){
+if(data.length >0) {
+$('#suggestions').show();
+$('#autoSuggestionsList').html(data);
+}
+});
+}
+}
+function fill(thisValue) {
+$('#inputString').val(thisValue);
+document.getElementsByName('inputString');
+setTimeout("$('#suggestions').hide();", 200);
+}
+</script>
+<style type="text/css">
+.hh
+{
+    position: absolute;
+    top:200px;
+    left:40px;
+}
+    body {
+font-family: Helvetica;
+font-size: 13px;
+color: #000;
+}
+h3 {
+margin: 0px;
+padding: 0px;
+}
+.suggestionsBox {
+position: relative;
+left: 260px;
+margin: 0px 0px 0px 0px;
+width: 200px;
+background-color: #7845DD;
+-moz-border-radius: 7px;
+-webkit-border-radius: 7px;
+border: 2px solid #000;
+color: #fff;
+}
+.suggestionList {
+margin: 0px;
+padding: 0px;
+}
+.suggestionList li {
+margin: 0px 0px 3px 0px;
+padding: 3px;
+cursor: pointer;
+}
+.suggestionList li:hover {
+background-color: #DD45CD;
+}
+.x{
+    position: absolute;
+    top:30px;
+    right:40px;
+}
+.p7
+{
+    position: absolute;
+    top:50px;
+    right: 50px;
+    
+}
+</style>
+</head>
+<body background="homepage_bg.jpg">
+    <p align="center"><img align="center" src="lets begin.jpg" width="600" height="200" ></p>
+    <font size="3"><p class="p7"><a href="homepage.jsp">Goto Homepage</a><br><br> <a href="logout.jsp">Logout</a></p></font>
+<div>
+<form action="appdetails" method="post">
+<div> 
+    <br><br><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Choose your Application:
+<input type="text" size="30" value="" name="n1" id="inputString" onkeyup="lookup(this.value);" onblur="fill();" />
+<input type="submit" value="search">
+</div>
+<div class="suggestionsBox" id="suggestions" style="display: none;">
+<div class="suggestionList" id="autoSuggestionsList">
+</div>
+</div>
+</form>
+</div>
+</body>
+</html>
+
